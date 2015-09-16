@@ -1,0 +1,7 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.softwaresquare.orms.database.dao.RequirementsDao">
+	<!-- 테이블의 모든 데이터를 불러옴 -->
+	<select id="getRequirements" resultType="org.softwaresquare.orms.database.dto.RequirementsDto">
+		SELECT * FROM requirements WHERE member=#{memberIdx} AND project=#{projectIdx}
+	</select>
+</mapper>
